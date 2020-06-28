@@ -61,4 +61,45 @@ CREATE TABLE prestamos(
 );
 
 --Ingreso datos
+INSERT INTO editoriales(editorial)
+VALUES ('UTHEA'),('Reverté'),('McGrawHill'),('MIR');
+
+INSERT INTO autores(autor)
+VALUES ('Lambe, C.'),('Christen, Hans Rudol'),('Serway, Raymond A'),
+('G Tranter, C. J'),('Murray Spiegel'),('Voevodin, Valentin V');
+
+INSERT INTO libros(codigo_libro, titulo)
+VALUES (515, 'Ecuaciones diferenciales para ingenieros y científicos'),
+    (540,'Química'),
+    (530,'Física'),
+    (519,'Estadística'),
+    (512,'Algebra Lineal');
+
+INSERT INTO lectores(apellido_paterno, apellido_materno, nombre)
+VALUES ('Pérez','Gómez','Juan'),
+    ('Ortega','Pereira','Margarita'),
+    ('García','Contreras','Rosa'),
+    ('López','Molina','Ana');
+
+INSERT INTO prestamos(codigo_libro, id_lector, fecha_devolucion)
+VALUES (515,1,'2019-09-15'),
+    (540,2,'2019-08-23'),
+    (530,3,'2019-09-24'),
+    (519,4,'2019-09-18'),
+    (512,1,'2019-09-17');
+
+INSERT INTO editorial_libro(codigo_libro,id_editorial)
+VALUES (515,1),
+    (540,2),
+    (530,3),
+    (519,3),
+    (512,4);
+
+INSERT INTO autor_libro(codigo_libro, id_autor)
+VALUES (515,1),
+    (540,2),
+    (530,3),
+    (515,4),
+    (519,5),
+    (512,6);
 
